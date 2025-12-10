@@ -1,0 +1,26 @@
+public class Main{
+    public static void main(String[] args){
+        int a = 10;
+        int b = 20;
+        System.out.println("A="+a);
+        System.out.println("B="+b);
+        // 1st approche
+
+        int temp = a;
+        a = b;
+        b = temp;
+        System.out.println("1st approche ");
+        System.out.println("A="+a);
+        System.out.println("B="+b);
+
+        //2nd approche
+
+
+        a = a+b;
+        b = a-b;
+        a = a-b;
+        System.out.println("2nd approche ");
+        System.out.println("A="+a);
+        System.out.println("B="+b);
+    }
+}
