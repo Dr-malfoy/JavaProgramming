@@ -1,0 +1,31 @@
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter your age: ");
+        int age = sc.nextInt();
+
+        System.out.print("Enter your salary: ");
+        double salary = sc.nextDouble();
+
+        double tax = 0;
+        if (age < 18) {
+            tax = 0;
+        }
+        else {
+            if (salary < 10000) {
+                tax = 0;
+            }
+            else if (salary >= 10000 && salary <= 20000) {
+                tax = salary * 0.05;
+            }
+            else if (salary > 20000) {
+                tax = salary * 0.10;
+            }
+        }
+
+        System.out.println("Your tax amount is: " + tax);
+    }
+}
