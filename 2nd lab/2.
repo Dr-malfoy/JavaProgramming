@@ -1,0 +1,38 @@
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Age: ");
+        int age = sc.nextInt();
+        sc.nextLine();
+        System.out.println("Enter Day: ");
+        String day = sc.nextLine();
+        String days = day.toLowerCase();
+
+        if(age < 13){
+            if(days.equals("sunday") || days.equals("saturday")){
+                System.out.println("Ticket price is 120 ");
+            }
+            else{
+                System.out.println("Ticket price is 100 ");
+            }
+        }
+        else if(age >= 13 && age <= 64){
+            if(days.equals("sunday") || days.equals("saturday")){
+                System.out.println("Ticket price is 180 ");
+            }
+            else{
+                System.out.println("Ticket price is 150 ");
+            }
+        }
+        else if(age >= 65){
+            if(days.equals("sunday") || days.equals("saturday")){
+                System.out.println("Ticket price is 150 ");
+            }
+            else{
+                System.out.println("Ticket price is 130 ");
+            }
+        }
+    }
+}
