@@ -1,0 +1,27 @@
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        double payment = 8.25;
+        double standerd_payment = 1.5*payment;
+        int stn_working_hour = 40;
+        int overtime_hour;
+        int working_hour = 47;
+
+        double total_payment;
+
+        if(working_hour > stn_working_hour){
+            overtime_hour = working_hour - stn_working_hour;
+             total_payment = (standerd_payment * overtime_hour) + (payment * stn_working_hour);
+        }
+        else{
+             total_payment = payment * stn_working_hour;
+             System.out.println("Regular payment" + total_payment);
+        }
+
+        System.out.println("Overtime Total payment: " + total_payment);
+
+
+    }
+}
