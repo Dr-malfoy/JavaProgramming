@@ -1,0 +1,17 @@
+import java.util.*;
+
+public class Main{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+
+        for (int i = 18; i <= 63; i += 9) {
+            if(i%2==0){
+                System.out.println(i);
+            }
+            else if(i%2!=0){
+                System.out.println(-i);
+            }
+
+        }
+    }
+}
